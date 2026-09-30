@@ -92,35 +92,35 @@ The two datasets were then combined into a unified dataset containing:
 ## Workflow
 
 - Publicly Available Datasets
-  -        ↓
-- Data Collection
--          ↓
-- Dataset Standardization
-  -        ↓
-- Data Integration
-  -        ↓
--Data Cleaning
- -         ↓
-- Missing Value Handling
-  -        ↓
-- Feature Engineering
-  -        ↓
-- Exploratory Data Analysis
-  -        ↓
-- Outlier Analysis
-  -        ↓
-- Correlation Analysis
-  -        ↓
-- Hypothesis Testing
-  -        ↓
-- Feature Preprocessing
-  -        ↓
-- Train-Test Split
-  -        ↓
-- Regression Models
-  -        ↓
-- Model Comparison
-  -        ↓
-- Price Prediction
-  -        ↓
-- CLI-Based Property Finder
+         ↓
+  Data Collection
+           ↓
+  Dataset Standardization
+          ↓
+  Data Integration
+          ↓
+   Data Cleaning
+          ↓
+  Missing Value Handling
+          ↓
+  Feature Engineering
+          ↓
+  Exploratory Data Analysis
+          ↓
+  Outlier Analysis
+          ↓
+  Correlation Analysis
+          ↓
+  Hypothesis Testing
+          ↓
+  Feature Preprocessing
+          ↓
+  Train-Test Split
+          ↓
+  Regression Models
+          ↓
+  Model Comparison
+          ↓
+  Price Prediction
+          ↓
+  CLI-Based Property Finder
