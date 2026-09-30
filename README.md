@@ -1,90 +1,81 @@
 # Multi-City Real Estate Price Prediction and Market Analysis
 
-A machine learning project that analyzes residential real-estate data from multiple Indian cities and predicts property prices using property characteristics and geographical information.
-
-The project integrates publicly available datasets from **Bengaluru and Mumbai**, standardizes their structures, performs data cleaning and feature engineering, explores market patterns through statistical analysis and visualization, and develops regression models for property price prediction.
-
----
+A machine learning project that analyzes residential real-estate data from **Bengaluru and Mumbai**, performs market analysis, and predicts property prices using property characteristics and geographical information.
 
 ## Overview
 
-Real-estate prices are influenced by several factors such as property size, number of bedrooms, bathrooms, location, property type, and the city in which the property is located.
-
-This project aims to build a complete data-driven pipeline that transforms heterogeneous real-estate datasets into a unified dataset and uses it for both **market analysis and machine learning-based price prediction**.
-
-The project covers:
+The project includes:
 
 - Multi-city dataset integration
-- Data cleaning and preprocessing
-- Missing-value analysis and imputation
+- Data cleaning and missing-value imputation
 - Feature engineering
 - Exploratory Data Analysis (EDA)
-- Outlier analysis
-- Correlation analysis
-- Statistical hypothesis testing
+- Correlation and hypothesis testing
 - Regression-based price prediction
-- Comparison of different feature configurations
 - CLI-based property search and price estimation
 
----
+## Machine Learning
 
-## Cities Covered
+The project evaluates:
 
-The current implementation covers:
+- Linear Regression
+- Ridge Regression
+- Random Forest
+- Gradient Boosting
 
-- **Bengaluru**
-- **Mumbai**
+**Random Forest** is used as the final prediction model.
 
-The data processing pipeline follows a common schema, allowing additional cities to be incorporated using the same approach.
+### Linear Regression Baseline
 
----
+| Metric | Result |
+|---|---:|
+| MAE | 47.46 lakhs |
+| RMSE | 97.30 lakhs |
+| R² Score | 0.72 |
 
-## Dataset
+- **MAE:** Average absolute prediction error.
+- **RMSE:** Measures prediction error while giving more weight to larger errors.
+- **R²:** Measures how much variation in property prices is explained by the model.
 
-The project uses publicly available real-estate datasets.
+## CLI-Based Property Finder
 
-### Bengaluru
+The project includes an interactive CLI-based property finder where users can enter requirements such as:
 
-The Bengaluru dataset contains **13,320 properties** with the following attributes:
+- City
+- BHK
+- Maximum budget
+- Preferred location
+- Minimum area
+- Bathrooms
+- Property type
 
-| Feature | Description |
-|---|---|
-| `area_type` | Type of area measurement |
-| `availability` | Property availability status |
-| `location` | Property locality |
-| `size` | BHK / bedroom information |
-| `society` | Society or project name |
-| `total_sqft` | Total property area |
-| `bath` | Number of bathrooms |
-| `balcony` | Number of balconies |
-| `price` | Property price in lakhs |
+The system filters suitable properties based on the user's requirements and provides property suggestions along with ML-based price estimation.
 
-### Mumbai
+## How to Run
 
-The Mumbai dataset contains **11,146 records** with property information including:
+1. Install dependencies:
 
-| Feature | Description |
-|---|---|
-| `area_type` | Type of area measurement |
-| `location` | Property locality |
-| `size` | BHK / bedroom information |
-| `total_sqft` | Total property area |
-| `bath` | Number of bathrooms |
-| `balcony` | Number of balconies |
-| `price` | Property price in lakhs |
+```bash
+pip install -r requirements.txt 
+```
+2. Open Real_Estate_EDA_to_ML.ipynb.
+3. Update the dataset paths in the notebook according to your local system:
+bengaluru_path = "your/path/Bengaluru_House_Data.csv"
+mumbai_path = "your/path/Mumbai_House_Data.xlsx"
+4. Run the notebook cells sequentially.
 
-The original Mumbai spreadsheet contained additional unused columns, which were removed during preprocessing.
+### Note: The datasets are not included in the repository due to their large file size. Download them separately and update the file paths before running the notebook.
 
-### Unified Dataset
+## Technologies Used
 
-Before integration, the datasets were standardized into a common structure:
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, SciPy, Jupyter Notebook
 
-```text
-city
-area_type
-location
-size
-total_sqft
-bath
-balcony
-price
+Future Scope
+Addition of more cities
+Automated data acquisition
+Web deployment
+Periodic real-estate market updates
+
+## Disclaimer
+
+This project is developed for educational and analytical purposes using publicly available real-estate datasets. Predicted prices should not be considered professional property valuations.
