@@ -93,6 +93,7 @@ The two datasets were then combined into a unified dataset containing:
 24,466 records
 
 ## Workflow
+
 Publicly Available Datasets
           ↓
 Data Collection
