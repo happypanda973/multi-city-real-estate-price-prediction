@@ -63,67 +63,64 @@ Original dataset size:
 
 The Mumbai dataset contains:
 
-Area type
-Location
-Size
-Total square feet
-Bathrooms
-Balconies
-Price in lakhs
+- Area type
+- Location
+- Size
+- Total square feet
+- Bathrooms
+- Balconies
+- Price in lakhs
 
 Original dataset size:
-
 11,146 rows × 16 columns
 
 The Mumbai dataset contained additional unused spreadsheet columns, which were removed during preprocessing.
-
 After standardization, the common fields were:
 
-city
-area_type
-location
-size
-total_sqft
-bath
-balcony
-price
+- city
+- area_type
+- location
+- size
+- total_sqft
+- bath
+- balcony
+- price
 
 The two datasets were then combined into a unified dataset containing:
-
 24,466 records
 
 ## Workflow
 
-Publicly Available Datasets
-          ↓
-Data Collection
-          ↓
-Dataset Standardization
-          ↓
-Data Integration
-          ↓
-Data Cleaning
-          ↓
-Missing Value Handling
-          ↓
-Feature Engineering
-          ↓
-Exploratory Data Analysis
-          ↓
-Outlier Analysis
-          ↓
-Correlation Analysis
-          ↓
-Hypothesis Testing
-          ↓
-Feature Preprocessing
-          ↓
-Train-Test Split
-          ↓
-Regression Models
-          ↓
-Model Comparison
-          ↓
-Price Prediction
-          ↓
-CLI-Based Property Finder
+- Publicly Available Datasets
+  -        ↓
+- Data Collection
+-          ↓
+- Dataset Standardization
+  -        ↓
+- Data Integration
+  -        ↓
+-Data Cleaning
+ -         ↓
+- Missing Value Handling
+  -        ↓
+- Feature Engineering
+  -        ↓
+- Exploratory Data Analysis
+  -        ↓
+- Outlier Analysis
+  -        ↓
+- Correlation Analysis
+  -        ↓
+- Hypothesis Testing
+  -        ↓
+- Feature Preprocessing
+  -        ↓
+- Train-Test Split
+  -        ↓
+- Regression Models
+  -        ↓
+- Model Comparison
+  -        ↓
+- Price Prediction
+  -        ↓
+- CLI-Based Property Finder
