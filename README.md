@@ -1,40 +1,41 @@
 # Multi-City Real Estate Price Prediction and Market Analysis
 
-A machine learning project for analyzing residential real-estate data and predicting property prices across multiple Indian cities.
+A machine learning project that analyzes residential real-estate data from multiple Indian cities and predicts property prices using property characteristics and geographical information.
 
-The project combines property datasets from Bengaluru and Mumbai into a common structure, performs data cleaning and feature engineering, explores market patterns through statistical and visual analysis, and develops regression models for property price prediction.
+The project integrates publicly available datasets from **Bengaluru and Mumbai**, standardizes their structures, performs data cleaning and feature engineering, explores market patterns through statistical analysis and visualization, and develops regression models for property price prediction.
 
 ---
 
-## Project Overview
+## Overview
 
-Real-estate prices vary significantly depending on property characteristics, locality, area, and city.
+Real-estate prices are influenced by several factors such as property size, number of bedrooms, bathrooms, location, property type, and the city in which the property is located.
 
-The objective of this project is to build a data-driven pipeline that can:
+This project aims to build a complete data-driven pipeline that transforms heterogeneous real-estate datasets into a unified dataset and uses it for both **market analysis and machine learning-based price prediction**.
 
-- Integrate real-estate datasets from different cities
-- Standardize different dataset structures
-- Clean and preprocess real-estate data
-- Handle missing values
-- Extract useful features such as BHK
-- Calculate price per square foot
-- Analyze relationships between property features and price
-- Compare real-estate characteristics across cities
-- Perform statistical hypothesis testing
-- Build machine learning regression models
-- Predict residential property prices
-- Provide a CLI-based property search and recommendation interface
+The project covers:
+
+- Multi-city dataset integration
+- Data cleaning and preprocessing
+- Missing-value analysis and imputation
+- Feature engineering
+- Exploratory Data Analysis (EDA)
+- Outlier analysis
+- Correlation analysis
+- Statistical hypothesis testing
+- Regression-based price prediction
+- Comparison of different feature configurations
+- CLI-based property search and price estimation
 
 ---
 
 ## Cities Covered
 
-Currently implemented:
+The current implementation covers:
 
-- Bengaluru
-- Mumbai
+- **Bengaluru**
+- **Mumbai**
 
-The preprocessing and integration pipeline is designed so that additional cities can be incorporated using the same standardized structure.
+The data processing pipeline follows a common schema, allowing additional cities to be incorporated using the same approach.
 
 ---
 
@@ -42,85 +43,48 @@ The preprocessing and integration pipeline is designed so that additional cities
 
 The project uses publicly available real-estate datasets.
 
-### Bengaluru Dataset
+### Bengaluru
 
-The Bengaluru dataset contains:
+The Bengaluru dataset contains **13,320 properties** with the following attributes:
 
-- Area type
-- Availability
-- Location
-- Size
-- Society
-- Total square feet
-- Bathrooms
-- Balconies
-- Price
+| Feature | Description |
+|---|---|
+| `area_type` | Type of area measurement |
+| `availability` | Property availability status |
+| `location` | Property locality |
+| `size` | BHK / bedroom information |
+| `society` | Society or project name |
+| `total_sqft` | Total property area |
+| `bath` | Number of bathrooms |
+| `balcony` | Number of balconies |
+| `price` | Property price in lakhs |
 
-Original dataset size:
-13,320 rows × 9 columns
+### Mumbai
 
-### Mumbai Dataset
+The Mumbai dataset contains **11,146 records** with property information including:
 
-The Mumbai dataset contains:
+| Feature | Description |
+|---|---|
+| `area_type` | Type of area measurement |
+| `location` | Property locality |
+| `size` | BHK / bedroom information |
+| `total_sqft` | Total property area |
+| `bath` | Number of bathrooms |
+| `balcony` | Number of balconies |
+| `price` | Property price in lakhs |
 
-- Area type
-- Location
-- Size
-- Total square feet
-- Bathrooms
-- Balconies
-- Price in lakhs
+The original Mumbai spreadsheet contained additional unused columns, which were removed during preprocessing.
 
-Original dataset size:
-11,146 rows × 16 columns
+### Unified Dataset
 
-The Mumbai dataset contained additional unused spreadsheet columns, which were removed during preprocessing.
-After standardization, the common fields were:
+Before integration, the datasets were standardized into a common structure:
 
-- city
-- area_type
-- location
-- size
-- total_sqft
-- bath
-- balcony
-- price
-
-The two datasets were then combined into a unified dataset containing:
-24,466 records
-
-## Workflow
-
-- Publicly Available Datasets
-         ↓
-  Data Collection
-           ↓
-  Dataset Standardization
-          ↓
-  Data Integration
-          ↓
-   Data Cleaning
-          ↓
-  Missing Value Handling
-          ↓
-  Feature Engineering
-          ↓
-  Exploratory Data Analysis
-          ↓
-  Outlier Analysis
-          ↓
-  Correlation Analysis
-          ↓
-  Hypothesis Testing
-          ↓
-  Feature Preprocessing
-          ↓
-  Train-Test Split
-          ↓
-  Regression Models
-          ↓
-  Model Comparison
-          ↓
-  Price Prediction
-          ↓
-  CLI-Based Property Finder
+```text
+city
+area_type
+location
+size
+total_sqft
+bath
+balcony
+price
